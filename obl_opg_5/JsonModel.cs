@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace obl_opg_5
 {
-    internal class JsonModel
+    public class JsonModel
     {
         public string? Method { get; set; }
         public int Number1 { get; set; }

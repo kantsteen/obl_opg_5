@@ -27,6 +27,15 @@ namespace obl_opg_5
             if (request.Method?.ToLower() == "add")
             {
                 int addNumbers = (request.Number1 + request.Number2);
+                JsonModel response = new JsonModel
+                {
+                    Method = "Add",
+                    Number1 = request.Number1,
+                    Number2 = request.Number2,
+                    Result = addNumbers,
+                };
+                string resultAdd = JsonSerializer.Serialize(response);
+                writer.Write(resultAdd);
 
             }
 
